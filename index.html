@@ -153,6 +153,139 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-必备js工具方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/02/必备js工具方法/">必备js工具方法</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/02/必备js工具方法/" class="archive-article-date">
+  	<time datetime="2018-03-02T09:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.所有的可能组合方式</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> anagrams = <span class="built_in">str</span> =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">str</span>.length &lt;= <span class="number">2</span>)  <span class="keyword">return</span> <span class="built_in">str</span>.length === <span class="number">2</span> ? [<span class="built_in">str</span>, <span class="built_in">str</span>[<span class="number">1</span>] + <span class="built_in">str</span>[<span class="number">0</span>]] : [<span class="built_in">str</span>];</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">str</span>.<span class="built_in">split</span>(<span class="string">''</span>).reduce( (acc, letter, i) =&gt; &#123;</span><br><span class="line">    anagrams(<span class="built_in">str</span>.slice(<span class="number">0</span>, i) + <span class="built_in">str</span>.slice(i + <span class="number">1</span>)).<span class="built_in">map</span>( val =&gt; acc.push(letter + val) );</span><br><span class="line">    <span class="keyword">return</span> acc;</span><br><span class="line">  &#125;, []);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// anagrams('abc') -&gt; ['abc','acb','bac','bca','cab','cba']</span></span><br></pre></td></tr></table></figure>
+<p>2.数字数组的平均值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> average = <span class="function"><span class="params">arr</span> =&gt;</span></span><br><span class="line">  arr.reduce( <span class="function">(<span class="params">acc , val</span>) =&gt;</span> acc + val, <span class="number">0</span>) / arr.length;</span><br><span class="line"><span class="comment">// average([1,2,3]) -&gt; 2</span></span><br></pre></td></tr></table></figure>
+<p>3.每一个单词首字母转换为大写</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> capitalizeEveryWord = <span class="function"><span class="params">str</span> =&gt;</span> str.replace(<span class="regexp">/\b[a-z]/g</span>, <span class="function"><span class="params">char</span> =&gt;</span> char.toUpperCase());</span><br><span class="line"><span class="comment">// capitalizeEveryWord('hello world!') -&gt; 'Hello World!'</span></span><br></pre></td></tr></table></figure>
+<p>4.首字母大写<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const capitalize = <span class="function"><span class="params">(str, lowerRest = <span class="literal">false</span>)</span> =&gt;</span></span><br><span class="line">  str.slice(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + (lowerRest? str.slice(<span class="number">1</span>).toLowerCase() : str.slice(<span class="number">1</span>));</span><br><span class="line"><span class="regexp">//</span> capitalize(<span class="string">'myName'</span>, <span class="literal">true</span>) -&gt; <span class="string">'Myname'</span></span><br><span class="line"><span class="regexp">//</span>capitalize(<span class="string">'myName'</span>) -&gt; <span class="string">'MyName</span></span><br></pre></td></tr></table></figure></p>
+<p>5.检查回文</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> palindrome = <span class="built_in">str</span> =&gt;</span><br><span class="line">  <span class="built_in">str</span>.toLowerCase().replace(/[\W_]/g,<span class="string">''</span>).<span class="built_in">split</span>(<span class="string">''</span>).<span class="built_in">reverse</span>().<span class="built_in">join</span>(<span class="string">''</span>) === <span class="built_in">str</span>.toLowerCase().replace(/[\W_]/g,<span class="string">''</span>);</span><br><span class="line"><span class="comment">// palindrome('taco cat') -&gt; true</span></span><br></pre></td></tr></table></figure>
+<p>6.计算数组中指定值的出现次数</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const countOccurrences = <span class="function"><span class="params">(arr, value)</span> =&gt;</span> arr.reduce(<span class="function"><span class="params">(a, v)</span> =&gt;</span> v === value ? a + <span class="number">1</span> : a + <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="regexp">//</span> countOccurrences([<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], <span class="number">1</span>) -&gt; <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>7.获取当前网址</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> currentUrl = <span class="function"><span class="params">_</span> =&gt;</span> <span class="built_in">window</span>.location.href</span><br></pre></td></tr></table></figure>
+<p>8.函数柯里化</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> curry = f =&gt;</span><br><span class="line">  (...<span class="keyword">args</span>) =&gt;</span><br><span class="line">    <span class="keyword">args</span>.length &gt;= f.length ? <span class="built_in">f</span>(...<span class="keyword">args</span>) : (...otherArgs) =&gt; curry(f)(...<span class="keyword">args</span>, ...otherArgs);</span><br><span class="line"><span class="comment">// curry(Math.pow)(2)(10) -&gt; 1024</span></span><br></pre></td></tr></table></figure>
+<p>9.嵌套数组合并</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> deepFlatten = <span class="function"><span class="params">arr</span> =&gt;</span></span><br><span class="line">  arr.reduce( <span class="function">(<span class="params">a, v</span>) =&gt;</span> a.concat( <span class="built_in">Array</span>.isArray(v) ? deepFlatten(v) : v ), []);</span><br><span class="line">  <span class="comment">// deepFlatten([1,[2],[[3],4],5]) -&gt; [1,2,3,4,5]</span></span><br></pre></td></tr></table></figure>
+<p>10.去掉2个数组的共有元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> difference = <span class="function">(<span class="params">arr, values</span>) =&gt;</span> arr.filter(<span class="function"><span class="params">v</span> =&gt;</span> !values.includes(v));</span><br><span class="line"><span class="comment">// difference([1,2,3], [1,2]) -&gt; [3]</span></span><br></pre></td></tr></table></figure>
+<p>11.计算2点直接的距离</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> distance = <span class="function">(<span class="params">x0, y0, x1, y1</span>) =&gt;</span> <span class="built_in">Math</span>.hypot(x1 - x0, y1 - y0);</span><br><span class="line"><span class="comment">// distance(1,1, 2,3) -&gt; 2.23606797749979</span></span><br></pre></td></tr></table></figure>
+<p>12.转义正则表达式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> escapeRegExp = <span class="function"><span class="params">str</span> =&gt;</span> str.replace(<span class="regexp">/[.*+?^$&#123;&#125;()|[\]\\]/g</span>, <span class="string">'\\$&amp;'</span>);</span><br><span class="line"><span class="comment">// escapeRegExp('(test)') -&gt; \\(test\\)</span></span><br></pre></td></tr></table></figure>
+<p>13.斐波拉契数列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fibonacci = <span class="function"><span class="params">n</span> =&gt;</span> </span><br><span class="line">  <span class="built_in">Array</span>(n).fill(<span class="number">0</span>).reduce(<span class="function">(<span class="params">acc, val, i</span>) =&gt;</span> acc.concat(i &gt; <span class="number">1</span> ? acc[i - <span class="number">1</span>] + acc[i - <span class="number">2</span>] : i),[]);</span><br><span class="line"><span class="comment">// fibonacci(5) -&gt; [0,1,1,2,3]</span></span><br></pre></td></tr></table></figure>
+<p>14.数组去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> unique = <span class="function"><span class="params">arr</span> =&gt;</span> arr.filter(<span class="function"><span class="params">i</span> =&gt;</span> arr.indexOf(i) === arr.lastIndexOf(i));</span><br><span class="line"><span class="comment">// unique([1,2,2,3,4,4,5]) -&gt; [1,3,5]</span></span><br></pre></td></tr></table></figure>
+<p>15.数组合并</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> flatten = <span class="function"><span class="params">arr</span> =&gt;</span> arr.reduce( <span class="function">(<span class="params">a, v</span>) =&gt;</span> a.concat(v), []);</span><br><span class="line"><span class="comment">// flatten([1,[2],3,4]) -&gt; [1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+<p>16.获取数组中最大值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrayMax = <span class="function"><span class="params">arr</span> =&gt;</span> <span class="built_in">Math</span>.max(...arr);</span><br><span class="line"><span class="comment">// arrayMax([10, 1, 5]) -&gt; 10</span></span><br></pre></td></tr></table></figure>
+<p>17.获取数组中最小值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrayMin = <span class="function"><span class="params">arr</span> =&gt;</span> <span class="built_in">Math</span>.min(...arr);</span><br><span class="line"><span class="comment">// arrayMin([10, 1, 5]) -&gt; 1</span></span><br></pre></td></tr></table></figure>
+<p>18.获取滚动条位置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getScrollPos = <span class="function">(<span class="params">el = <span class="built_in">window</span></span>) =&gt;</span></span><br><span class="line">  ( &#123;<span class="attr">x</span>: (el.pageXOffset !== <span class="literal">undefined</span>) ? el.pageXOffset : el.scrollLeft,</span><br><span class="line">   y: (el.pageYOffset !== <span class="literal">undefined</span>) ? el.pageYOffset : el.scrollTop&#125; );</span><br><span class="line"><span class="comment">// getScrollPos() -&gt; &#123;x: 0, y: 200&#125;</span></span><br></pre></td></tr></table></figure>
+<p>19.最大公约数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> gcd = <span class="function">(<span class="params">x , y</span>) =&gt;</span> !y ? x : gcd(y, x % y);</span><br><span class="line"><span class="comment">// gcd (8, 36) -&gt; 4</span></span><br></pre></td></tr></table></figure>
+<p>20.使用一组连续范围数字初始化一个组数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> initializeArrayRange = <span class="function">(<span class="params">end, start = <span class="number">0</span></span>) =&gt;</span></span><br><span class="line">  <span class="built_in">Array</span>.apply(<span class="literal">null</span>, <span class="built_in">Array</span>(end-start)).map( <span class="function">(<span class="params">v,i</span>) =&gt;</span> i + start );</span><br><span class="line">  <span class="comment">// initializeArrayRange(5) -&gt; [0,1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+<p>21.测试函数执行时间</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> timeTaken = (<span class="function"><span class="keyword">func</span>,...<span class="title">args</span>) =&gt; &#123;</span></span><br><span class="line">  var t0 = performance.now(), r = <span class="function"><span class="keyword">func</span><span class="params">(...args)</span>;</span></span><br><span class="line">  console.<span class="built_in">log</span>(performance.now() - t0)<span class="comment">;</span></span><br><span class="line">  <span class="keyword">return</span> r<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line">// timeTaken(Math.pow, <span class="number">2</span>, <span class="number">10</span>) -&gt; <span class="number">1024</span> (<span class="number">0.010000000009313226</span> logged <span class="keyword">in</span> console)</span><br></pre></td></tr></table></figure>
+<p>22.将键值对数组转成对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> objectFromPairs = <span class="function"><span class="params">arr</span> =&gt;</span> arr.reduce(<span class="function">(<span class="params">a,v</span>) =&gt;</span> (a[v[<span class="number">0</span>]] = v[<span class="number">1</span>], a), &#123;&#125;);</span><br><span class="line"><span class="comment">// objectFromPairs([['a',1],['b',2]]) -&gt; &#123;a: 1, b: 2&#125;</span></span><br></pre></td></tr></table></figure>
+<p>23.管道,返回一组函数处理后的结果</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const pipe = <span class="function"><span class="params">(...funcs)</span> =&gt;</span> arg =&gt; funcs.reduce(<span class="function"><span class="params">(acc, func)</span> =&gt;</span> func(acc), arg);</span><br><span class="line"><span class="regexp">//</span> pipe(btoa, x =&gt; x.toUpperCase())(<span class="string">"Test"</span>) -&gt; <span class="string">"VGVZDA=="</span></span><br></pre></td></tr></table></figure>
+<p>24.生成指定范围的随机整数</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> randomIntegerInRange = (<span class="built_in">min</span>, <span class="built_in">max</span>) =&gt; Math.<span class="built_in">floor</span>(Math.<span class="built_in">random</span>() * (<span class="built_in">max</span> - <span class="built_in">min</span> + <span class="number">1</span>)) + <span class="built_in">min</span>;</span><br><span class="line"><span class="comment">// randomIntegerInRange(0, 5) -&gt; 2</span></span><br></pre></td></tr></table></figure>
+<p>25.将数组乱序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> randomizeOrder = <span class="function"><span class="params">arr</span> =&gt;</span> arr.sort( <span class="function">(<span class="params">a,b</span>) =&gt;</span> <span class="built_in">Math</span>.random() &gt;= <span class="number">0.5</span> ? <span class="number">-1</span> : <span class="number">1</span>);</span><br><span class="line"><span class="comment">// randomizeOrder([1,2,3]) -&gt; [1,3,2]</span></span><br></pre></td></tr></table></figure>
+<p>26.RGB转16进制值</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const rgbToHex = (r, g, b) =&gt; ((r &lt;&lt; <span class="number">16</span>) + (g &lt;&lt; <span class="number">8</span>) + b).toString(<span class="number">16</span>).padStart(<span class="number">6</span>, '<span class="number">0</span>');</span><br><span class="line"><span class="comment">// rgbToHex(255, 165, 1) -&gt; 'ffa501'</span></span><br></pre></td></tr></table></figure>
+<p>27.回到顶部</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> scrollToTop = <span class="function"><span class="params">_</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> c = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">  <span class="keyword">if</span>(c &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">window</span>.requestAnimationFrame(scrollToTop);</span><br><span class="line">    <span class="built_in">window</span>.scrollTo(<span class="number">0</span>, c - c/<span class="number">8</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// scrollToTop()</span></span><br></pre></td></tr></table></figure>
+<p>28.获取2个数组的交集</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> similarity = <span class="function">(<span class="params">arr, values</span>) =&gt;</span> arr.filter(<span class="function"><span class="params">v</span> =&gt;</span> values.includes(v));</span><br><span class="line"><span class="comment">// similarity([1,2,3], [1,2,4]) -&gt; [1,2]</span></span><br></pre></td></tr></table></figure>
+<p>29.字符排序</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sortCharactersInString = <span class="built_in">str</span> =&gt;</span><br><span class="line">  <span class="built_in">str</span>.<span class="built_in">split</span>(<span class="string">''</span>).<span class="built_in">sort</span>( (a,b) =&gt; a.localeCompare(b) ).<span class="built_in">join</span>(<span class="string">''</span>);</span><br><span class="line"><span class="comment">// sortCharactersInString('cabbage') -&gt; 'aabbceg'</span></span><br></pre></td></tr></table></figure>
+<p>30.获取url中的参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getUrlParameters = <span class="function"><span class="params">url</span> =&gt;</span></span><br><span class="line">  <span class="built_in">Object</span>.assign(...url.match(<span class="regexp">/([^?=&amp;]+)(=([^&amp;]*))?/g</span>).map(<span class="function"><span class="params">m</span> =&gt;</span> &#123;[f,v] = m.split(<span class="string">'='</span>); <span class="keyword">return</span> &#123;[f]:v&#125;&#125;));</span><br><span class="line">  <span class="comment">// getUrlParameters('http://url.com/page?name=Adam&amp;surname=Smith') -&gt; &#123;name: 'Adam', surname: 'Smith'&#125;</span></span><br></pre></td></tr></table></figure>
+<p>31.UUID生成</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const uuid = _ =&gt;</span><br><span class="line">  ( [<span class="number">1e7</span>]+<span class="number">-1e3</span>+<span class="number">-4e3</span>+<span class="number">-8e3</span>+<span class="number">-1e11</span> ).replace( /[<span class="number">018</span>]/g, c =&gt;</span><br><span class="line">    (c ^ crypto.getRandomValues(new Uint8Array(<span class="number">1</span>))[<span class="number">0</span>] &amp; <span class="number">15</span> &gt;&gt; c / <span class="number">4</span>).toString(<span class="number">16</span>)</span><br><span class="line">  );</span><br><span class="line"><span class="comment">// uuid() -&gt; '7982fcfe-5721-4632-bede-6000885be57d'</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/02/必备js工具方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-开源程序地址" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -776,92 +909,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/04/ss/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-位字节字符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/04/位字节字符/">位字节字符</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/04/位字节字符/" class="archive-article-date">
-  	<time datetime="2018-01-04T13:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-bit：位"><a href="#1-bit：位" class="headerlink" title="1. bit：位"></a>1. bit：位</h3><pre><code>一个二进制数据0或1，是1bit；
-</code></pre><h3 id="2-byte：字节"><a href="#2-byte：字节" class="headerlink" title="2. byte：字节"></a>2. byte：字节</h3><pre><code>存储空间的基本计量单位，如：MySQL中定义 VARCHAR(45)  即是指 45个字节；
-1 byte = 8 bit
-</code></pre><h3 id="3-一个英文字符占一个字节；"><a href="#3-一个英文字符占一个字节；" class="headerlink" title="3. 一个英文字符占一个字节；"></a>3. 一个英文字符占一个字节；</h3><pre><code>1 字母 = 1 byte = 8 bit
-</code></pre><h3 id="4-一个汉字占2个字节；"><a href="#4-一个汉字占2个字节；" class="headerlink" title="4. 一个汉字占2个字节；"></a>4. 一个汉字占2个字节；</h3><pre><code>1 汉字 = 2 byte = 16 bit
-</code></pre><h3 id="5-标点符号"><a href="#5-标点符号" class="headerlink" title="5. 标点符号"></a>5. 标点符号</h3><pre><code>A&gt;.  汉字输入状态下，默认为全角输入方式；
-B&gt;.  英文输入状态下，默认为半角输入方式；
-
-C&gt;.  全角输入方式下，标点符号占2字节；
-D&gt;.  半角输入方式下，标点符号占1字节；
-
-故：汉字输入状态下的字符，占2个字节 (但不排除，自己更改了默认设置)；
-        英文输入状态下的字符，占1个字节 (但不排除，自己更改了默认设置)
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/04/位字节字符/">展开全文 >></a>
         </p>
       
 

@@ -15,7 +15,7 @@
 <meta property="og:url" content="//ismatch.cn/2018/03/02/必备js工具方法/index.html">
 <meta property="og:site_name" content="丹麦的面包不单卖的博客">
 <meta property="og:description" content="1.所有的可能组合方式 12345678const anagrams = str =&amp;gt; &amp;#123;  if(str.length &amp;lt;= 2)  return str.length === 2 ? [str, str[1] + str[0]] : [str];  return str.split(&apos;&apos;).reduce( (acc, letter, i) =&amp;gt; &amp;#123;">
-<meta property="og:updated_time" content="2018-03-02T09:48:15.948Z">
+<meta property="og:updated_time" content="2018-03-04T17:40:27.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="必备js工具方法">
 <meta name="twitter:description" content="1.所有的可能组合方式 12345678const anagrams = str =&amp;gt; &amp;#123;  if(str.length &amp;lt;= 2)  return str.length === 2 ? [str, str[1] + str[0]] : [str];  return str.split(&apos;&apos;).reduce( (acc, letter, i) =&amp;gt; &amp;#123;">
@@ -178,6 +178,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> average = <span class="function"><span class="params">arr</span> =&gt;</span></span><br><span class="line">  arr.reduce( <span class="function">(<span class="params">acc , val</span>) =&gt;</span> acc + val, <span class="number">0</span>) / arr.length;</span><br><span class="line"><span class="comment">// average([1,2,3]) -&gt; 2</span></span><br></pre></td></tr></table></figure>
 <p>3.每一个单词首字母转换为大写</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> capitalizeEveryWord = <span class="function"><span class="params">str</span> =&gt;</span> str.replace(<span class="regexp">/\b[a-z]/g</span>, <span class="function"><span class="params">char</span> =&gt;</span> char.toUpperCase());</span><br><span class="line"><span class="comment">// capitalizeEveryWord('hello world!') -&gt; 'Hello World!'</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>4.首字母大写<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const capitalize = <span class="function"><span class="params">(str, lowerRest = <span class="literal">false</span>)</span> =&gt;</span></span><br><span class="line">  str.slice(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + (lowerRest? str.slice(<span class="number">1</span>).toLowerCase() : str.slice(<span class="number">1</span>));</span><br><span class="line"><span class="regexp">//</span> capitalize(<span class="string">'myName'</span>, <span class="literal">true</span>) -&gt; <span class="string">'Myname'</span></span><br><span class="line"><span class="regexp">//</span>capitalize(<span class="string">'myName'</span>) -&gt; <span class="string">'MyName</span></span><br></pre></td></tr></table></figure></p>
 <p>5.检查回文</p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> palindrome = <span class="built_in">str</span> =&gt;</span><br><span class="line">  <span class="built_in">str</span>.toLowerCase().replace(/[\W_]/g,<span class="string">''</span>).<span class="built_in">split</span>(<span class="string">''</span>).<span class="built_in">reverse</span>().<span class="built_in">join</span>(<span class="string">''</span>) === <span class="built_in">str</span>.toLowerCase().replace(/[\W_]/g,<span class="string">''</span>);</span><br><span class="line"><span class="comment">// palindrome('taco cat') -&gt; true</span></span><br></pre></td></tr></table></figure>
@@ -468,6 +469,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
               </li>
              
@@ -480,23 +485,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">计算机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小东西</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">收藏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">计算机</a>
               </li>
             
             <div class="clearfix"></div>

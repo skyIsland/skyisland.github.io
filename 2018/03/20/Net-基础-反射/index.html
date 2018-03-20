@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//ismatch.cn">
-  <title>Archives: 2018 | 丹麦的面包不单卖的博客</title>
+  <title>.Net 基础-反射 | 丹麦的面包不单卖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="克莱登大学南极洲文学史专业肄业.">
-<meta name="keywords" content="小码农">
-<meta property="og:type" content="website">
-<meta property="og:title" content="丹麦的面包不单卖的博客">
-<meta property="og:url" content="//ismatch.cn/archives/2018/index.html">
+  <meta name="description" content="定义   在.NET中，查看和操作元数据的动作称为反射（也称为元编程）。    使用">
+<meta name="keywords" content=".Net基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content=".Net 基础-反射">
+<meta property="og:url" content="//ismatch.cn/2018/03/20/Net-基础-反射/index.html">
 <meta property="og:site_name" content="丹麦的面包不单卖的博客">
-<meta property="og:description" content="克莱登大学南极洲文学史专业肄业.">
+<meta property="og:description" content="定义   在.NET中，查看和操作元数据的动作称为反射（也称为元编程）。    使用">
+<meta property="og:image" content="//ismatch.cn/files/Reflection.jpg">
+<meta property="og:updated_time" content="2018-03-20T15:30:48.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="丹麦的面包不单卖的博客">
-<meta name="twitter:description" content="克莱登大学南极洲文学史专业肄业.">
+<meta name="twitter:title" content=".Net 基础-反射">
+<meta name="twitter:description" content="定义   在.NET中，查看和操作元数据的动作称为反射（也称为元编程）。    使用">
+<meta name="twitter:image" content="//ismatch.cn/files/Reflection.jpg">
   
     <link rel="alternative" href="/atom.xml" title="丹麦的面包不单卖的博客" type="application/atom+xml">
   
@@ -151,36 +154,82 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Net-基础-反射" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      .Net 基础-反射
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/Net-基础-反射/" class="archive-article-date">
+
+        
+        <a href="/2018/03/20/Net-基础-反射/" class="archive-article-date">
   	<time datetime="2018-03-20T14:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/Net-基础-反射/">.Net 基础-反射</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>定义</li>
+</ul>
+<blockquote>
+<p>在.NET中，查看和操作元数据的动作称为反射（也称为元编程）。</p>
+</blockquote>
+<p><img src="/files/Reflection.jpg" alt="image"></p>
+<ul>
+<li>使用</li>
+</ul>
+<a id="more"></a>
+<blockquote>
+<p>你需要先使用Assembly.Load或LoadFrom方法找到程序集，然后你可以使用GetType获得该程序集的一个类型，最后，使用Activator.CreateInstance（你获得的类型对象）创建该类型的一个实例。</p>
+</blockquote>
+<p>1.准备好的程序集<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ReflectionDLL</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Class1</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> aPublicField;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> aPrivateField;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> aPublicProperty &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> aPrivateProperty &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler aEvent;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Ctor</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Class1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HelloWorld</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello world!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Add</span>(<span class="params"><span class="keyword">int</span> a, <span class="keyword">int</span> b</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> a + b;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.在控制台程序调用</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ReflectionDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            Assembly a = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                a = Assembly.LoadFile(<span class="string">@"D:\Code\Sky.2018Test\DLL\ReflectionDLL.dll"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//Ignore</span></span><br><span class="line">                Console.WriteLine(<span class="string">$"加载程序集发生错误,原因<span class="subst">&#123;ex.Message&#125;</span>"</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (a != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                CreateUsingLateBinding(a);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CreateUsingLateBinding</span>(<span class="params">Assembly asm</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">/*</span></span><br><span class="line"><span class="comment">                 * 不用var 方便一眼看出当前返回的是什么类型 不用鼠标点上去看是什么类型</span></span><br><span class="line"><span class="comment">                 */</span></span><br><span class="line">                <span class="comment">// 获得类型实例</span></span><br><span class="line">                Type t = asm.GetType(<span class="string">"ReflectionDLL.Class1"</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 晚期绑定建立一个Class1的实例</span></span><br><span class="line">                <span class="keyword">object</span> obj = Activator.CreateInstance(t);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 获得一个方法</span></span><br><span class="line">                MethodInfo mi = t.GetMethod(<span class="string">"HelloWorld"</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 方法的反射调用执行(没有参数) 感觉像是js.call() 是什么类型调用什么方法</span></span><br><span class="line">                mi.Invoke(obj, <span class="literal">null</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">$"发生错误,原因<span class="subst">&#123;ex.Message&#125;</span>"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意，这样创建的类型实例是Object类型。（C# 4引入了动态类型之后，也可以用dynamic修饰这种类型的实例）这个类型对象的方法都不可见，如果要使用它的方法，只能使用反射（例如使用GetMethods获得方法信息，然后再Invoke）。这是反射最普遍的应用场景。</p>
+<ul>
+<li>参考链接</li>
+</ul>
+<p><a href="http://www.cnblogs.com/haoyifei/p/5730284.html" target="_blank" rel="noopener">反射</a></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/AlipayQrCode.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -192,502 +241,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://ismatch.cn/2018/03/20/Net-基础-反射/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/Net-垃圾回收/" class="archive-article-date">
-  	<time datetime="2018-03-20T14:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/20/Net-垃圾回收/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">.Net基础-垃圾回收</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/Net-垃圾回收/">.Net基础-垃圾回收</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">.Net基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/19/云飞扬CMS快速开发平台学习笔记/" class="archive-article-date">
-  	<time datetime="2018-03-19T15:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/19/云飞扬CMS快速开发平台学习笔记/">云飞扬CMS快速开发平台学习笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SourceCode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/05/js必备工具方法/" class="archive-article-date">
-  	<time datetime="2018-03-04T18:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/05/js必备工具方法/">js必备工具方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/15/开源程序地址/" class="archive-article-date">
-  	<time datetime="2018-02-14T18:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/15/开源程序地址/">开源程序地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/15/小东西/" class="archive-article-date">
-  	<time datetime="2018-02-14T18:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/15/小东西/">小东西</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小东西</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/15/2018年计划/" class="archive-article-date">
-  	<time datetime="2018-02-14T18:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/15/2018年计划/">2018年计划</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计划</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/13/恋爱先生观后感/" class="archive-article-date">
-  	<time datetime="2018-02-12T17:59:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/13/恋爱先生观后感/">恋爱先生观后感</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">观后感</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/13/Hexo命令/" class="archive-article-date">
-  	<time datetime="2018-02-12T17:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/13/Hexo命令/">Hexo命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/15/计算机专业术语对照/" class="archive-article-date">
-  	<time datetime="2018-01-14T17:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/15/计算机专业术语对照/">计算机专业术语对照</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/04/ss/" class="archive-article-date">
-  	<time datetime="2018-01-04T13:57:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/04/ss/">利用js的slice,只需一行代码完成星星评分</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/04/位字节字符/" class="archive-article-date">
-  	<time datetime="2018-01-04T13:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/04/位字节字符/">位字节字符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/04/Js比较时间大小/" class="archive-article-date">
-  	<time datetime="2018-01-04T13:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/04/Js比较时间大小/">Js比较时间大小</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/04/HelloWorld/" class="archive-article-date">
-  	<time datetime="2018-01-04T13:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/04/HelloWorld/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">诗和远方</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -710,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

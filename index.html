@@ -153,6 +153,173 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Net-基础-反射" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/20/Net-基础-反射/">.Net 基础-反射</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/20/Net-基础-反射/" class="archive-article-date">
+  	<time datetime="2018-03-20T14:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>定义</li>
+</ul>
+<blockquote>
+<p>在.NET中，查看和操作元数据的动作称为反射（也称为元编程）。</p>
+</blockquote>
+<p><img src="/files/Reflection.jpg" alt="image"></p>
+<ul>
+<li>使用</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/03/20/Net-基础-反射/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">.Net基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/20/Net-基础-反射/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Net-垃圾回收" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/20/Net-垃圾回收/">.Net基础-垃圾回收</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/20/Net-垃圾回收/" class="archive-article-date">
+  	<time datetime="2018-03-20T14:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="常规的垃圾回收策略："><a href="#常规的垃圾回收策略：" class="headerlink" title="常规的垃圾回收策略："></a>常规的垃圾回收策略：</h5><ul>
+<li>类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。</li>
+<li>类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。</li>
+<li><p>类中有非托管资源: 跟从微软模板，实现一个私有函数释放托管和非托管资源，实现IDisposible，然后实现Dispose方法，并在其中调用私有函数，然后呼叫GC.SuppressFinalize（第一道闸）。实现一个解构函数，并在其中调用私有函数（第二道闸）。如果你的第一道闸完美无缺，第二道闸是没有机会上场的。</p>
+</li>
+<li><p>参考链接</p>
+</li>
+</ul>
+<p><a href="http://www.cnblogs.com/haoyifei/p/5680745.html" target="_blank" rel="noopener">垃圾回收：概念与策略</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">.Net基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/20/Net-垃圾回收/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-云飞扬CMS快速开发平台学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -679,185 +846,6 @@
 
 
   
-    <article id="post-Hexo命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/13/Hexo命令/">Hexo命令</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/13/Hexo命令/" class="archive-article-date">
-  	<time datetime="2018-02-12T17:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>npm install hexo-cli -g #安装hexo</li>
-<li>hexo init # 初始化，安装所需包</li>
-<li>npm install # 其实此句不是必须，新版本的Hexo在初始化时就安装好了依赖包)</li>
-<li>hexo g # 生成</li>
-<li>hexo s # 运行</li>
-<li>hexo n # 新建文章，在\source_posts文件夹里</li>
-<li>hexo new page # 新建页面，比如想在导航栏新增一个“关于我”的页面</li>
-<li>hexo clean # 清除本地的数据库和生成的public文件夹</li>
-<li>hexo g # 生成博客文件</li>
-<li>hexo s # 运行在本地浏览器，可当预览使用</li>
-<li>hexo d # 部署博客到Github等</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/13/Hexo命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-计算机专业术语对照" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/15/计算机专业术语对照/">计算机专业术语对照</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/15/计算机专业术语对照/" class="archive-article-date">
-  	<time datetime="2018-01-14T17:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><ul>
-<li>abstraction layer，抽象层</li>
-<li>access，获取，存取</li>
-<li>acoustic coupler，声音耦合器</li>
-<li>Active Directory，活动目录</li>
-<li>Acyclic Dependencies Principle，非循环依赖原则（ADP）</li>
-<li>acyclic digraph，有向无环图    </li>
-<li>Adaptive Code，自适应代码</li>
-<li>Add Parameter，添加参数</li>
-<li>ADSL，Asymmetrical Dingital Subscriber Loop，非对称数字用户环线</li>
-<li>affinity，绑定</li>
-<li>affinity group，地缘组</li>
-<li>agent，代理</li>
-<li>agent-based interface，代理人界面</li>
-<li>Agile，敏捷方法论</li>
-<li>agile practice，敏捷实践</li>
-<li>agile peocess，敏捷流程</li>
-<li>agility，敏捷性
-        
-          <a class="article-more-a" href="/2018/01/15/计算机专业术语对照/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/15/计算机专业术语对照/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -992,6 +980,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
               </li>
             
             <div class="clearfix"></div>

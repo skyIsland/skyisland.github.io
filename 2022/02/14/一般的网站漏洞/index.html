@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//ismatch.cn">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://ismatch.cn">
   <title>一般的网站漏洞 | 丹麦的面包不单卖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="防范要点 账号 禁止使用类似admin superadmin之类的   密码 操作系统、数据库、用户 定时过期，强制修改 强度要求 数据库连接字符串加密   明文传输">
-<meta name="keywords" content="安全漏洞">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一般的网站漏洞">
-<meta property="og:url" content="//ismatch.cn/2022/02/14/一般的网站漏洞/index.html">
+<meta property="og:url" content="https://ismatch.cn/2022/02/14/%E4%B8%80%E8%88%AC%E7%9A%84%E7%BD%91%E7%AB%99%E6%BC%8F%E6%B4%9E/index.html">
 <meta property="og:site_name" content="丹麦的面包不单卖的博客">
 <meta property="og:description" content="防范要点 账号 禁止使用类似admin superadmin之类的   密码 操作系统、数据库、用户 定时过期，强制修改 强度要求 数据库连接字符串加密   明文传输">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-11-12T07:31:51.501Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-14T03:03:00.000Z">
+<meta property="article:modified_time" content="2026-11-12T07:31:51.501Z">
+<meta property="article:author" content="ismatch">
+<meta property="article:tag" content="安全漏洞">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一般的网站漏洞">
-<meta name="twitter:description" content="防范要点 账号 禁止使用类似admin superadmin之类的   密码 操作系统、数据库、用户 定时过期，强制修改 强度要求 数据库连接字符串加密   明文传输">
   
     <link rel="alternative" href="/atom.xml" title="丹麦的面包不单卖的博客" type="application/atom+xml">
   
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">ismatch</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">遇见你那天，阳光很好，BUG很少。</p>
 		
 
 		<nav class="header-menu">
@@ -111,10 +109,8 @@
 				<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">ismatch</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>遇见你那天，阳光很好，BUG很少。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -171,7 +167,7 @@
   
 
         
-        <a href="/2022/02/14/一般的网站漏洞/" class="archive-article-date">
+        <a href="/2022/02/14/%E4%B8%80%E8%88%AC%E7%9A%84%E7%BD%91%E7%AB%99%E6%BC%8F%E6%B4%9E/" class="archive-article-date">
   	<time datetime="2022-02-14T03:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-14</time>
 </a>
         
@@ -193,34 +189,30 @@
 </li>
 <li>明文传输</li>
 </ol>
-<a id="more"></a> 
+<span id="more"></span> 
+
 <ol>
-<li><p>任意文件上传</p>
-<ul>
+<li>任意文件上传<ul>
 <li>上传文件重命名</li>
-<li><p>判断文件类型 </p>
-<ul>
+<li>判断文件类型 <ul>
 <li><ol>
-<li>文件后缀名 </li>
+<li>文件后缀名</li>
 </ol>
 </li>
 <li><ol start="2">
-<li><p>文件头</p>
-<ul>
-<li><p>常用文件类型的文件头</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// &lt;summary&gt;</span></span><br><span class="line"><span class="comment">/// 常用文件类型的文件头</span></span><br><span class="line"><span class="comment">/// &lt;/summary&gt;</span></span><br><span class="line">public static Dictionary&lt;<span class="type">string</span>, byte[]&gt; FileHeaders = new Dictionary&lt;<span class="type">string</span>, byte[]&gt;</span><br><span class="line">&#123;</span><br><span class="line">    &#123;<span class="string">"gif"</span>, new byte[] &#123; <span class="number">71</span>, <span class="number">73</span>, <span class="number">70</span>, <span class="number">56</span>, <span class="number">57</span>, <span class="number">97</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"bmp"</span>, new byte[] &#123; <span class="number">66</span>, <span class="number">77</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"jpg"</span>, new byte[] &#123; <span class="number">255</span>, <span class="number">216</span>, <span class="number">255</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"png"</span>, new byte[] &#123; <span class="number">137</span>, <span class="number">80</span>, <span class="number">78</span>, <span class="number">71</span>, <span class="number">13</span>, <span class="number">10</span>, <span class="number">26</span>, <span class="number">10</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">13</span>, <span class="number">73</span>, <span class="number">72</span>, <span class="number">68</span>, <span class="number">82</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"pdf"</span>, new byte[] &#123; <span class="number">37</span>, <span class="number">80</span>, <span class="number">68</span>, <span class="number">70</span>, <span class="number">45</span>, <span class="number">49</span>, <span class="number">46</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"docx"</span>, new byte[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">33</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"xlsx"</span>, new byte[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">33</span> &#125; &#125; ,</span><br><span class="line">    &#123;<span class="string">"pptx"</span>, new byte[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">33</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"doc"</span>, new byte[] &#123; <span class="number">208</span>, <span class="number">207</span>, <span class="number">17</span>, <span class="number">224</span>, <span class="number">161</span>, <span class="number">177</span>, <span class="number">26</span>, <span class="number">225</span> &#125; &#125;,     </span><br><span class="line">    &#123;<span class="string">"xls"</span>, new byte[] &#123; <span class="number">208</span>, <span class="number">207</span>, <span class="number">17</span>, <span class="number">224</span>, <span class="number">161</span>, <span class="number">177</span>, <span class="number">26</span>, <span class="number">225</span> &#125; &#125;,                         </span><br><span class="line">    &#123;<span class="string">"ppt"</span>, new byte[] &#123; <span class="number">208</span>, <span class="number">207</span>, <span class="number">17</span>, <span class="number">224</span>, <span class="number">161</span>, <span class="number">177</span>, <span class="number">26</span>, <span class="number">225</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"rar"</span>, new byte[] &#123; <span class="number">82</span>, <span class="number">97</span>, <span class="number">114</span>, <span class="number">33</span>, <span class="number">26</span>, <span class="number">7</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"zip"</span>, new byte[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">"7z"</span>, new byte[] &#123; <span class="number">55</span>, <span class="number">122</span>, <span class="number">188</span>, <span class="number">175</span>, <span class="number">39</span>, <span class="number">28</span>, <span class="number">0</span>, <span class="number">4</span> &#125; &#125;,</span><br><span class="line">    <span class="comment">//&#123;"csv", new byte[] &#123; 49, 44 &#125; &#125;,</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>判断文件头</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">            using (var fs = new FileStream(finalPath, FileMode.Create))</span></span><br><span class="line"><span class="code">                &#123;</span></span><br><span class="line"><span class="code">                    var index = 0;</span></span><br><span class="line"><span class="code">                    foreach (var part in files.OrderBy(x =&gt; x.Length).ThenBy(x =&gt; x))//排一下序，保证从0-N Write</span></span><br><span class="line"><span class="code">                    &#123;                        </span></span><br><span class="line"><span class="code">                        var bytes = System.IO.File.ReadAllBytes(part);</span></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line"><span class="code">                        // 文件头判断</span></span><br><span class="line"><span class="code">                        if (index == 0)</span></span><br><span class="line"><span class="code">                        &#123;</span></span><br><span class="line"><span class="code">                            // 查找是否有匹配的文件头</span></span><br><span class="line"><span class="code">                            var isMatch = false;</span></span><br><span class="line"><span class="code">                            foreach (var fileHeader in FileHeaders)</span></span><br><span class="line"><span class="code">                            &#123;</span></span><br><span class="line"><span class="code">                                if (bytes.Length &gt; fileHeader.Value.Length)</span></span><br><span class="line"><span class="code">                                &#123;</span></span><br><span class="line"><span class="code">                                    var currIsMatch = true;</span></span><br><span class="line"><span class="code">                                    for (int i = 0; i &lt; fileHeader.Value.Length; i++)</span></span><br><span class="line"><span class="code">                                    &#123;</span></span><br><span class="line"><span class="code">                                        if (fileHeader.Value[i] != bytes[i])</span></span><br><span class="line"><span class="code">                                        &#123;</span></span><br><span class="line"><span class="code">                                            currIsMatch = false;</span></span><br><span class="line"><span class="code">                                            break;</span></span><br><span class="line"><span class="code">                                        &#125;</span></span><br><span class="line"><span class="code">                                    &#125;</span></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line"><span class="code">                                    isMatch = currIsMatch;</span></span><br><span class="line"><span class="code">                                    if (isMatch)</span></span><br><span class="line"><span class="code">                                    &#123;</span></span><br><span class="line"><span class="code">                                        break;</span></span><br><span class="line"><span class="code">                                    &#125;</span></span><br><span class="line"><span class="code">                                &#125;</span></span><br><span class="line"><span class="code">                            &#125;                            </span></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line"><span class="code">                            if (!isMatch)</span></span><br><span class="line"><span class="code">                            &#123;</span></span><br><span class="line"><span class="code">                                result.Message = "抱歉，安全验证文件类型有误，无法上传。";</span></span><br><span class="line"><span class="code">                                return Json(result);</span></span><br><span class="line"><span class="code">                            &#125;                            </span></span><br><span class="line"><span class="code">                        &#125;</span></span><br><span class="line"><span class="code">                        fs.Write(bytes, 0, bytes.Length);</span></span><br><span class="line"><span class="code">                        bytes = null;</span></span><br><span class="line"><span class="code">                        System.IO.File.Delete(part);//删除分块</span></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line"><span class="code">                        index++;</span></span><br><span class="line"><span class="code">                    &#125;</span></span><br><span class="line"><span class="code">                    fs.Flush();</span></span><br><span class="line"><span class="code">                    fs.Close();</span></span><br><span class="line"><span class="code">                &#125;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
+<li>文件头</li>
 </ol>
-</li>
+<ul>
+<li>常用文件类型的文件头</li>
+</ul>
+  <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 常用文件类型的文件头</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Dictionary&lt;<span class="built_in">string</span>, <span class="built_in">byte</span>[]&gt; FileHeaders = <span class="keyword">new</span> Dictionary&lt;<span class="built_in">string</span>, <span class="built_in">byte</span>[]&gt;</span><br><span class="line">&#123;</span><br><span class="line">    &#123;<span class="string">&quot;gif&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">71</span>, <span class="number">73</span>, <span class="number">70</span>, <span class="number">56</span>, <span class="number">57</span>, <span class="number">97</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;bmp&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">66</span>, <span class="number">77</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;jpg&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">255</span>, <span class="number">216</span>, <span class="number">255</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;png&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">137</span>, <span class="number">80</span>, <span class="number">78</span>, <span class="number">71</span>, <span class="number">13</span>, <span class="number">10</span>, <span class="number">26</span>, <span class="number">10</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">13</span>, <span class="number">73</span>, <span class="number">72</span>, <span class="number">68</span>, <span class="number">82</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;pdf&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">37</span>, <span class="number">80</span>, <span class="number">68</span>, <span class="number">70</span>, <span class="number">45</span>, <span class="number">49</span>, <span class="number">46</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;docx&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">33</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;xlsx&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">33</span> &#125; &#125; ,</span><br><span class="line">    &#123;<span class="string">&quot;pptx&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">33</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;doc&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">208</span>, <span class="number">207</span>, <span class="number">17</span>, <span class="number">224</span>, <span class="number">161</span>, <span class="number">177</span>, <span class="number">26</span>, <span class="number">225</span> &#125; &#125;,     </span><br><span class="line">    &#123;<span class="string">&quot;xls&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">208</span>, <span class="number">207</span>, <span class="number">17</span>, <span class="number">224</span>, <span class="number">161</span>, <span class="number">177</span>, <span class="number">26</span>, <span class="number">225</span> &#125; &#125;,                         </span><br><span class="line">    &#123;<span class="string">&quot;ppt&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">208</span>, <span class="number">207</span>, <span class="number">17</span>, <span class="number">224</span>, <span class="number">161</span>, <span class="number">177</span>, <span class="number">26</span>, <span class="number">225</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;rar&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">82</span>, <span class="number">97</span>, <span class="number">114</span>, <span class="number">33</span>, <span class="number">26</span>, <span class="number">7</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;zip&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">80</span>, <span class="number">75</span>, <span class="number">3</span>, <span class="number">4</span> &#125; &#125;,</span><br><span class="line">    &#123;<span class="string">&quot;7z&quot;</span>, <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; <span class="number">55</span>, <span class="number">122</span>, <span class="number">188</span>, <span class="number">175</span>, <span class="number">39</span>, <span class="number">28</span>, <span class="number">0</span>, <span class="number">4</span> &#125; &#125;,</span><br><span class="line">    <span class="comment">//&#123;&quot;csv&quot;, new byte[] &#123; 49, 44 &#125; &#125;,</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>判断文件头</li>
+</ul>
+  <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">            using (<span class="keyword">var</span> fs = <span class="keyword">new</span> <span class="title class_">FileStream</span>(finalPath, <span class="title class_">FileMode</span>.<span class="title class_">Create</span>))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line">                    foreach (<span class="keyword">var</span> <span class="keyword">part</span> <span class="keyword">in</span> files.<span class="title class_">OrderBy</span>(x =&gt; x.<span class="title class_">Length</span>).<span class="title class_">ThenBy</span>(x =&gt; x))<span class="comment">//排一下序，保证从0-N Write</span></span><br><span class="line">                    &#123;                        </span><br><span class="line">                        <span class="keyword">var</span> bytes = <span class="title class_">System</span>.IO.<span class="title class_">File</span>.<span class="title class_">ReadAllBytes</span>(<span class="keyword">part</span>);</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line">                        <span class="comment">// 文件头判断</span></span><br><span class="line">                        <span class="keyword">if</span> (index == <span class="number">0</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="comment">// 查找是否有匹配的文件头</span></span><br><span class="line">                            <span class="keyword">var</span> isMatch = <span class="keyword">false</span>;</span><br><span class="line">                            foreach (<span class="keyword">var</span> fileHeader <span class="keyword">in</span> <span class="title class_">FileHeaders</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="keyword">if</span> (bytes.<span class="title class_">Length</span> &gt; fileHeader.<span class="title class_">Value</span>.<span class="title class_">Length</span>)</span><br><span class="line">                                &#123;</span><br><span class="line">                                    <span class="keyword">var</span> currIsMatch = <span class="keyword">true</span>;</span><br><span class="line">                                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; fileHeader.<span class="title class_">Value</span>.<span class="title class_">Length</span>; i++)</span><br><span class="line">                                    &#123;</span><br><span class="line">                                        <span class="keyword">if</span> (fileHeader.<span class="title class_">Value</span>[i] != bytes[i])</span><br><span class="line">                                        &#123;</span><br><span class="line">                                            currIsMatch = <span class="keyword">false</span>;</span><br><span class="line">                                            <span class="keyword">break</span>;</span><br><span class="line">                                        &#125;</span><br><span class="line">                                    &#125;</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line">                                    isMatch = currIsMatch;</span><br><span class="line">                                    <span class="keyword">if</span> (isMatch)</span><br><span class="line">                                    &#123;</span><br><span class="line">                                        <span class="keyword">break</span>;</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;                            </span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line">                            <span class="keyword">if</span> (!isMatch)</span><br><span class="line">                            &#123;</span><br><span class="line">                                result.<span class="title class_">Message</span> = <span class="string">&quot;抱歉，安全验证文件类型有误，无法上传。&quot;</span>;</span><br><span class="line">                                <span class="keyword">return</span> <span class="title class_">Json</span>(result);</span><br><span class="line">                            &#125;                            </span><br><span class="line">                        &#125;</span><br><span class="line">                        fs.<span class="title class_">Write</span>(bytes, <span class="number">0</span>, bytes.<span class="title class_">Length</span>);</span><br><span class="line">                        bytes = <span class="keyword">null</span>;</span><br><span class="line">                        <span class="title class_">System</span>.IO.<span class="title class_">File</span>.<span class="title class_">Delete</span>(<span class="keyword">part</span>);<span class="comment">//删除分块</span></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a8fd0b0b16fb234960e5e99868aebc4812989c23</span><br><span class="line">                        index++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    fs.<span class="title class_">Flush</span>();</span><br><span class="line">                    fs.<span class="title class_">Close</span>();</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p><a href="https://blog.csdn.net/lacoucou/article/details/97814385?utm_term=%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E7%9B%AE%E5%BD%95%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%8D%E5%8F%AF%E6%89%A7%E8%A1%8C&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-97814385&amp;spm=3001.4430" target="_blank" rel="noopener">设置目录不可执行程序</a></p>
-</li>
+<li><a href="https://blog.csdn.net/lacoucou/article/details/97814385?utm_term=%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E7%9B%AE%E5%BD%95%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%8D%E5%8F%AF%E6%89%A7%E8%A1%8C&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-97814385&spm=3001.4430">设置目录不可执行程序</a></li>
 </ul>
 </li>
 <li>信息漏洞泄漏<ul>
@@ -330,7 +322,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://ismatch.cn/2022/02/14/一般的网站漏洞/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ismatch.cn/2022/02/14/%E4%B8%80%E8%88%AC%E7%9A%84%E7%BD%91%E7%AB%99%E6%BC%8F%E6%B4%9E/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,7 +336,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/04/02/Oracle闪回/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/04/02/Oracle%E9%97%AA%E5%9B%9E/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -354,7 +346,7 @@
     </a>
   
   
-    <a href="/2021/10/18/vue-cli安装以及搭建vue项目详细步骤/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/10/18/vue-cli%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">vue-cli安装以及搭建vue项目详细步骤</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -491,15 +483,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">计算机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,11 +491,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,11 +503,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -531,15 +515,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
+                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -551,15 +543,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">books</a>
+                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -567,11 +555,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
+                <a href="javascript:void(0)" class="js-tag color1">books</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -583,11 +567,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -596,6 +580,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">My</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">

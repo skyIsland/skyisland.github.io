@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//ismatch.cn">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://ismatch.cn">
   <title>.Net框架理解笔记 | 丹麦的面包不单卖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.CIL——公共中间语言（Common Intermediate Language） 经过编译器编译之后，所生成的程序集就是由CIL语言代码描述的。（IL）  公共。基于.Net平台运行 中间。介于机器码与C#(或者其他基于.Net平台运行的语言)之间的语言，同时还需要.Net运行时环境的支持 语言。基于堆栈的语言，面向对象。">
-<meta name="keywords" content=".Net基础">
+  <meta name="description" content="1.CIL——公共中间语言（Common Intermediate Language） 经过编译器编译之后，所生成的程序集就是由CIL语言代码描述的。（IL）   公共。基于.Net平台运行 中间。介于机器码与C#(或者其他基于.Net平台运行的语言)之间的语言，同时还需要.Net运行时环境的支持 语言。基于堆栈的语言，面向对象。">
 <meta property="og:type" content="article">
 <meta property="og:title" content=".Net框架理解笔记">
-<meta property="og:url" content="//ismatch.cn/2019/05/07/Net框架理解笔记/index.html">
+<meta property="og:url" content="https://ismatch.cn/2019/05/07/Net%E6%A1%86%E6%9E%B6%E7%90%86%E8%A7%A3%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="丹麦的面包不单卖的博客">
-<meta property="og:description" content="1.CIL——公共中间语言（Common Intermediate Language） 经过编译器编译之后，所生成的程序集就是由CIL语言代码描述的。（IL）  公共。基于.Net平台运行 中间。介于机器码与C#(或者其他基于.Net平台运行的语言)之间的语言，同时还需要.Net运行时环境的支持 语言。基于堆栈的语言，面向对象。">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="1.CIL——公共中间语言（Common Intermediate Language） 经过编译器编译之后，所生成的程序集就是由CIL语言代码描述的。（IL）   公共。基于.Net平台运行 中间。介于机器码与C#(或者其他基于.Net平台运行的语言)之间的语言，同时还需要.Net运行时环境的支持 语言。基于堆栈的语言，面向对象。">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://img.tracefact.net/tech/netframework/07.png">
 <meta property="og:image" content="http://img.tracefact.net/tech/netframework/18.png">
 <meta property="og:image" content="http://img.tracefact.net/tech/netframework/19.png">
-<meta property="og:updated_time" content="2026-11-12T07:31:51.500Z">
+<meta property="article:published_time" content="2019-05-07T14:50:00.000Z">
+<meta property="article:modified_time" content="2026-11-12T07:31:51.500Z">
+<meta property="article:author" content="ismatch">
+<meta property="article:tag" content=".Net基础">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=".Net框架理解笔记">
-<meta name="twitter:description" content="1.CIL——公共中间语言（Common Intermediate Language） 经过编译器编译之后，所生成的程序集就是由CIL语言代码描述的。（IL）  公共。基于.Net平台运行 中间。介于机器码与C#(或者其他基于.Net平台运行的语言)之间的语言，同时还需要.Net运行时环境的支持 语言。基于堆栈的语言，面向对象。">
 <meta name="twitter:image" content="http://img.tracefact.net/tech/netframework/07.png">
   
     <link rel="alternative" href="/atom.xml" title="丹麦的面包不单卖的博客" type="application/atom+xml">
@@ -41,8 +41,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -55,10 +55,8 @@
 			<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">ismatch</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">遇见你那天，阳光很好，BUG很少。</p>
 		
 
 		<nav class="header-menu">
@@ -115,10 +113,8 @@
 				<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">ismatch</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>遇见你那天，阳光很好，BUG很少。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -175,7 +171,7 @@
   
 
         
-        <a href="/2019/05/07/Net框架理解笔记/" class="archive-article-date">
+        <a href="/2019/05/07/Net%E6%A1%86%E6%9E%B6%E7%90%86%E8%A7%A3%E7%AC%94%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2019-05-07T14:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
 </a>
         
@@ -185,13 +181,14 @@
       
         <h4 id="1-CIL——公共中间语言（Common-Intermediate-Language）"><a href="#1-CIL——公共中间语言（Common-Intermediate-Language）" class="headerlink" title="1.CIL——公共中间语言（Common Intermediate Language）"></a>1.CIL——公共中间语言（Common Intermediate Language）</h4><blockquote>
 <p>经过编译器编译之后，所生成的程序集就是由CIL语言代码描述的。（IL）</p>
+</blockquote>
 <ul>
 <li>公共。基于.Net平台运行</li>
 <li>中间。介于机器码与C#(或者其他基于.Net平台运行的语言)之间的语言，同时还需要.Net运行时环境的支持</li>
 <li>语言。基于堆栈的语言，面向对象。</li>
 </ul>
-</blockquote>
-<a id="more"></a>
+<span id="more"></span>
+
 <blockquote>
 <p>由于程序集是由CIL语言所描述的，因此CIL也叫做程序集语言（Assembly Language）。又因为.NET程序集需要由.NET运行时加载才能运行，可以视其为由.NET运行时进行管理的，所以CIL代码也叫做托管代码（Managed Code）。相对的，不需要.NET运行时就可以执行的代码就叫做非托管代码（Unmanaged Code）。</p>
 </blockquote>
@@ -210,8 +207,7 @@
 <th>VB.NET关键字</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>System.Byte</td>
 <td>byte</td>
 <td>Byte</td>
@@ -226,8 +222,7 @@
 <td>long</td>
 <td>Long</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h4 id="2-2-FCL——框架类库（Framework-Class-Library）"><a href="#2-2-FCL——框架类库（Framework-Class-Library）" class="headerlink" title="2.2 FCL——框架类库（Framework Class Library）"></a>2.2 FCL——框架类库（Framework Class Library）</h4><ul>
 <li>BCL从属于FCL</li>
 <li>最内一层，由BCL的大部分组成，主要作用是对.NET框架、.NET运行时及CIL语言本身进行支持，例如基元类型、集合类型、线程处理、应用程序域、运行时、安全性、互操作等。 </li>
@@ -248,24 +243,22 @@
 </li>
 <li>CLS是CTS的一个子集</li>
 </ul>
-<h4 id="5-CLR——公共语言运行时（Common-Language-Runtime）-NET运行时（-NET-runtime）"><a href="#5-CLR——公共语言运行时（Common-Language-Runtime）-NET运行时（-NET-runtime）" class="headerlink" title="5. CLR——公共语言运行时（Common Language Runtime）/.NET运行时（.NET runtime）"></a>5. CLR——公共语言运行时（Common Language Runtime）/.NET运行时（.NET runtime）</h4><blockquote>
+<h4 id="5-CLR——公共语言运行时（Common-Language-Runtime）-NET运行时（-NET-runtime）"><a href="#5-CLR——公共语言运行时（Common-Language-Runtime）-NET运行时（-NET-runtime）" class="headerlink" title="5. CLR——公共语言运行时（Common Language Runtime）&#x2F;.NET运行时（.NET runtime）"></a>5. CLR——公共语言运行时（Common Language Runtime）&#x2F;.NET运行时（.NET runtime）</h4><blockquote>
 <p>CLR是一个软件层或代理，它管理了.NET程序集的执行，主要包括：管理应用程序域、加载和运行程序集、安全检查、将CIL代码即时编译为机器代码、异常处理、对象析构和垃圾回收等。CLR是使用非托管代码编写。</p>
-<ul>
-<li>了解程序集<ul>
-<li>程序集包含了CIL语言代码，而CIL语言代码是无法直接运行的，需要经过.NET运行时进行即时编译才能转换为计算机可以直接执行的机器指令。</li>
-<li>所有在Windows操作系统上运行的程序都需要符合PE/COFF文件的格式<br><img src="http://img.tracefact.net/tech/netframework/18.png" alt="image">    </li>
-</ul>
-</li>
-</ul>
 </blockquote>
 <ul>
+<li><p>了解程序集</p>
+<ul>
+<li>程序集包含了CIL语言代码，而CIL语言代码是无法直接运行的，需要经过.NET运行时进行即时编译才能转换为计算机可以直接执行的机器指令。</li>
+<li>所有在Windows操作系统上运行的程序都需要符合PE&#x2F;COFF文件的格式<br><img src="http://img.tracefact.net/tech/netframework/18.png" alt="image"></li>
+</ul>
+</li>
 <li><p>运行程序集（当操作系统尝试打开一个托管程序集（.exe）时）</p>
 <ul>
 <li>首先会检查PE头，根据PE头来创建合适的进程</li>
 <li>进一步检查是否存在CLR头，如果存在，就会立即载入MsCorEE.dll（.NET框架的核心组件之一）</li>
 <li>加载了MsCorEE.dll之后，会调用其中的_CorExeMain()函数，该函数会加载合适版本的CLR</li>
-<li><p>在CLR运行之后，程序的执行权就交给了CLR。CLR会找到程序的入口点，通常是Main()方法，然后执行它。</p>
-<ul>
+<li>在CLR运行之后，程序的执行权就交给了CLR。CLR会找到程序的入口点，通常是Main()方法，然后执行它。<ul>
 <li><p>加载类型。在执行Main()方法之前，首先要找到拥有Main()方法的类型并且加载这个类型。CLR中一个名为Class loader（类加载程序）的组件负责这项工作。它会从GAC、配置文件、程序集元数据中寻找这个类型，然后将它的类型信息加载到内存中的数据结构中。在Class loader找到并加载完这个类型之后，它的类型信息会被缓存起来，这样就无需再次进行相同的过程。在加载这个类以后，还会为它的每个方法插入一个存根（stub）。</p>
 </li>
 <li><p>验证。在CLR中，还存在一个验证程序（verifier），该验证程序的工作是在运行时确保代码是类型安全的。它主要校验两个方面，一个是元数据是正确的，一个是CIL代码必须是类型安全的，类型的签名必须正确。</p>
@@ -281,7 +274,7 @@
 <h4 id="6-CLI——公共语言基础-Common-Language-Infrastructure"><a href="#6-CLI——公共语言基础-Common-Language-Infrastructure" class="headerlink" title="6.  CLI——公共语言基础(Common Language Infrastructure)"></a>6.  CLI——公共语言基础(Common Language Infrastructure)</h4><blockquote>
 <p>实际上本章的每一小节都是这个标准的一部分。CLI包括：CIL、CTS、CLS、VES、元数据、基础框架。</p>
 </blockquote>
-<h4 id="学习链接"><a href="#学习链接" class="headerlink" title="学习链接"></a><a href="http://www.tracefact.net/tech/042.html" target="_blank" rel="noopener">学习链接</a></h4>
+<h4 id="学习链接"><a href="#学习链接" class="headerlink" title="学习链接"></a><a href="http://www.tracefact.net/tech/042.html">学习链接</a></h4>
       
 
       
@@ -376,7 +369,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://ismatch.cn/2019/05/07/Net框架理解笔记/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ismatch.cn/2019/05/07/Net%E6%A1%86%E6%9E%B6%E7%90%86%E8%A7%A3%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -400,7 +393,7 @@
     </a>
   
   
-    <a href="/2019/05/07/GIT重新学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/07/GIT%E9%87%8D%E6%96%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">GIT重新学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -537,15 +530,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">计算机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,11 +538,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -565,11 +550,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -577,15 +562,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
+                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,15 +590,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">books</a>
+                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,11 +602,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
+                <a href="javascript:void(0)" class="js-tag color1">books</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -629,11 +614,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -642,6 +627,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">My</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">

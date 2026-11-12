@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//ismatch.cn">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://ismatch.cn">
   <title>GIT重新学习笔记 | 丹麦的面包不单卖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="0.重新系统学习GIT，查缺补漏1.关于版本控制 版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统">
-<meta name="keywords" content="GIT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GIT重新学习笔记">
-<meta property="og:url" content="//ismatch.cn/2019/05/07/GIT重新学习笔记/index.html">
+<meta property="og:url" content="https://ismatch.cn/2019/05/07/GIT%E9%87%8D%E6%96%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="丹麦的面包不单卖的博客">
 <meta property="og:description" content="0.重新系统学习GIT，查缺补漏1.关于版本控制 版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/areas.png">
-<meta property="og:updated_time" content="2026-11-12T07:31:51.498Z">
+<meta property="article:published_time" content="2019-05-07T14:48:00.000Z">
+<meta property="article:modified_time" content="2026-11-12T07:31:51.498Z">
+<meta property="article:author" content="ismatch">
+<meta property="article:tag" content="GIT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GIT重新学习笔记">
-<meta name="twitter:description" content="0.重新系统学习GIT，查缺补漏1.关于版本控制 版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统">
 <meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/areas.png">
   
     <link rel="alternative" href="/atom.xml" title="丹麦的面包不单卖的博客" type="application/atom+xml">
@@ -39,8 +39,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -53,10 +53,8 @@
 			<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">ismatch</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">遇见你那天，阳光很好，BUG很少。</p>
 		
 
 		<nav class="header-menu">
@@ -113,10 +111,8 @@
 				<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">ismatch</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>遇见你那天，阳光很好，BUG很少。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -173,7 +169,7 @@
   
 
         
-        <a href="/2019/05/07/GIT重新学习笔记/" class="archive-article-date">
+        <a href="/2019/05/07/GIT%E9%87%8D%E6%96%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2019-05-07T14:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
 </a>
         
@@ -184,7 +180,8 @@
         <h4 id="0-重新系统学习GIT，查缺补漏"><a href="#0-重新系统学习GIT，查缺补漏" class="headerlink" title="0.重新系统学习GIT，查缺补漏"></a>0.重新系统学习GIT，查缺补漏</h4><h4 id="1-关于版本控制"><a href="#1-关于版本控制" class="headerlink" title="1.关于版本控制"></a>1.关于版本控制</h4><blockquote>
 <p>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统</p>
 </blockquote>
-<a id="more"></a>
+<span id="more"></span>
+
 <table>
 <thead>
 <tr>
@@ -193,8 +190,7 @@
 <th>典型作品</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>本地版本控制系统</td>
 <td>*</td>
 <td>RCS</td>
@@ -209,21 +205,25 @@
 <td>分布式版本控制系统（Distributed Version Control System，简称 DVCS）面世了。 在这类系统中，像 Git、Mercurial、Bazaar 以及 Darcs 等，客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。 这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。</td>
 <td>GIT</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h4 id="2-GIT基础"><a href="#2-GIT基础" class="headerlink" title="2.GIT基础"></a>2.GIT基础</h4><ul>
-<li>直接记录快照，而非差异比较</li>
-<li>近乎所有操作都是本地执行<ul>
+<li><p>直接记录快照，而非差异比较</p>
+</li>
+<li><p>近乎所有操作都是本地执行</p>
+<ul>
 <li>在 Git 中的绝大多数操作都只需要访问本地文件和资源，一般不需要来自网络上其它计算机的信息。</li>
 </ul>
 </li>
-<li>Git 保证完整性<ul>
+<li><p>Git 保证完整性</p>
+<ul>
 <li>Git 中所有数据在存储前都计算校验和，然后以校验和来引用。</li>
 <li>使用SHA-1 散列生成校验和，类似于“24b9da6552252987aa493b52f8696cd6d3b00373”</li>
 </ul>
 </li>
-<li>Git 一般只添加数据</li>
-<li>三种状态<ul>
+<li><p>Git 一般只添加数据</p>
+</li>
+<li><p>三种状态</p>
+<ul>
 <li>已提交（committed）。表示数据已经安全的保存在本地数据库中。</li>
 <li>已修改（modified）。表示修改了文件，但还没保存到数据库中。</li>
 <li>已暂存（staged）。表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。</li>
@@ -243,20 +243,20 @@
 </ul>
 <h4 id="初次运行-Git-前的配置"><a href="#初次运行-Git-前的配置" class="headerlink" title="初次运行 Git 前的配置"></a>初次运行 Git 前的配置</h4><ul>
 <li>外观和行为可通过配置变量进行配置。配置读取顺序，仓库 -&gt; 当前用户 -&gt; 所有用户（不大懂）</li>
-<li><p>配置用户名称与邮件地址</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name <span class="string">"John Doe"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email johndoe@example.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>文本编辑器</p>
+<li>配置用户名称与邮件地址</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;John Doe&quot;</span></span><br><span class="line">$ git config <span class="attr">--global</span> user<span class="selector-class">.email</span> johndoe@example.com</span><br></pre></td></tr></table></figure>
+
 <ul>
+<li>文本编辑器<ul>
 <li>默认是vim编辑器</li>
-<li>windows配置[notepad++]为默认编辑器<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置 注意：'Program Files‘: 因为中间有空格，所以必须使用单引号括起来。</span></span><br><span class="line">$ git config --<span class="keyword">global</span> core.<span class="keyword">editor</span>  <span class="string">"C:/'Program Files'/Notepad++/Notepad++.exe"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出默认编辑器</span></span><br><span class="line">$ git config --<span class="keyword">global</span> core.<span class="keyword">editor</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>windows配置[notepad++]为默认编辑器</li>
 </ul>
-</li>
-<li><p>检查配置信息</p>
-</li>
+  <figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置 注意：&#x27;Program Files‘: 因为中间有空格，所以必须使用单引号括起来。</span></span><br><span class="line">$ git config --<span class="keyword">global</span> core.<span class="keyword">editor</span>  <span class="string">&quot;C:/&#x27;Program Files&#x27;/Notepad++/Notepad++.exe&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出默认编辑器</span></span><br><span class="line">$ git config --<span class="keyword">global</span> core.<span class="keyword">editor</span> </span><br></pre></td></tr></table></figure></li>
+<li>检查配置信息</li>
 </ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--list</span><br></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">config</span> <span class="comment">--list</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="3-操作仓库"><a href="#3-操作仓库" class="headerlink" title="3.操作仓库"></a>3.操作仓库</h4><ul>
 <li><p>在现有目录中初始化仓库</p>
 <ul>
@@ -267,8 +267,7 @@
 </ul>
 </li>
 <li><p>克隆现有的仓库。</p>
-  <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/libgit2/libgit2</span><br></pre></td></tr></table></figure>
-</li>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> https://github.com/libgit2/libgit2</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="4-记录每次更新到仓库"><a href="#4-记录每次更新到仓库" class="headerlink" title="4.记录每次更新到仓库"></a>4.记录每次更新到仓库</h4><ul>
 <li><p>工作目录下的每一个文件都不外乎这两种状态：已跟踪或未跟踪</p>
@@ -280,9 +279,12 @@
 </li>
 <li><p>生命周期了解。</p>
 </li>
-<li>检查当前文件状态。（status）</li>
-<li>跟踪新文件。（add newfile.txt）</li>
-<li>暂存已修改文件(add modified.txt)。所以git add是一个多功能命令，可以跟踪新文件，也可以把已跟踪文件放入暂存区，用于合并时把有冲突的文件标记为已解决的状态。git add这个命令理解为添加内容到下一次提交中”而不是“将一个文件添加到项目中”要更加合适</li>
+<li><p>检查当前文件状态。（status）</p>
+</li>
+<li><p>跟踪新文件。（add newfile.txt）</p>
+</li>
+<li><p>暂存已修改文件(add modified.txt)。所以git add是一个多功能命令，可以跟踪新文件，也可以把已跟踪文件放入暂存区，用于合并时把有冲突的文件标记为已解决的状态。git add这个命令理解为添加内容到下一次提交中”而不是“将一个文件添加到项目中”要更加合适</p>
+</li>
 <li><p>状态简览。（git status -s）</p>
 <ul>
 <li>新添加的未跟踪文件前面有 ?? 标记，新添加到暂存区中的文件前面有 A 标记，修改过的文件前面有 M 标记。</li>
@@ -290,13 +292,13 @@
 </li>
 <li><p>忽略文件。创建一个名为 .gitignore 的文件，列出要忽略的文件模式</p>
 <ul>
-<li><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></li>
+<li><a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></li>
 <li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。 </li>
 <li>可以使用标准的 glob 模式匹配。 </li>
-<li>匹配模式可以以（/）开头防止递归。 </li>
-<li>匹配模式可以以（/）结尾指定目录。 </li>
+<li>匹配模式可以以（&#x2F;）开头防止递归。 </li>
+<li>匹配模式可以以（&#x2F;）结尾指定目录。 </li>
 <li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。</li>
-<li>所谓的 glob 模式是指 shell 所使用的简化了的正则表达式。 星号（<em>）匹配零个或多个任意字符；[abc] 匹配任何一个列在方括号中的字符（这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；问号（?）只匹配一个任意字符；如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如 [0-9] 表示匹配所有 0 到 9 的数字）。 使用两个星号（</em>) 表示匹配任意中间目录，比如 a/**/z 可以匹配 a/z , a/b/z 或 a/b/c/z 等。</li>
+<li>所谓的 glob 模式是指 shell 所使用的简化了的正则表达式。 星号（<em>）匹配零个或多个任意字符；[abc] 匹配任何一个列在方括号中的字符（这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；问号（?）只匹配一个任意字符；如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如 [0-9] 表示匹配所有 0 到 9 的数字）。 使用两个星号（</em>) 表示匹配任意中间目录，比如 a&#x2F;**&#x2F;z 可以匹配 a&#x2F;z , a&#x2F;b&#x2F;z 或 a&#x2F;b&#x2F;c&#x2F;z 等。</li>
 <li>查看已暂存和未暂存的修改。(git diff)</li>
 <li>提交更新。git commit</li>
 <li>跳过使用暂存区域。git commit -a -m ‘added new benchmarks’</li>
@@ -310,7 +312,7 @@
 </li>
 </ul>
 <h4 id="学习地址"><a href="#学习地址" class="headerlink" title="学习地址"></a>学习地址</h4><ul>
-<li><a href="https://git-scm.com/book/zh/v2/" target="_blank" rel="noopener">官网地址</a>    </li>
+<li><a href="https://git-scm.com/book/zh/v2/">官网地址</a></li>
 </ul>
 
       
@@ -407,7 +409,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://ismatch.cn/2019/05/07/GIT重新学习笔记/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ismatch.cn/2019/05/07/GIT%E9%87%8D%E6%96%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -421,7 +423,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/07/Net框架理解笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/07/Net%E6%A1%86%E6%9E%B6%E7%90%86%E8%A7%A3%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -431,7 +433,7 @@
     </a>
   
   
-    <a href="/2019/05/05/03-通过你的CPU主频，我们来谈谈“性能”究竟是什么？/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/05/03-%E9%80%9A%E8%BF%87%E4%BD%A0%E7%9A%84CPU%E4%B8%BB%E9%A2%91%EF%BC%8C%E6%88%91%E4%BB%AC%E6%9D%A5%E8%B0%88%E8%B0%88%E2%80%9C%E6%80%A7%E8%83%BD%E2%80%9D%E7%A9%B6%E7%AB%9F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">03 - 通过你的CPU主频，我们来谈谈“性能”究竟是什么？</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -568,15 +570,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">计算机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -584,11 +578,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -596,11 +590,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -608,15 +602,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
+                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -628,15 +630,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">books</a>
+                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,11 +642,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
+                <a href="javascript:void(0)" class="js-tag color1">books</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -660,11 +654,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -673,6 +667,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">My</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">

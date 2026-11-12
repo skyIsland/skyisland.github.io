@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//ismatch.cn">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://ismatch.cn">
   <title>Oracle数据库表被锁死的处理方法 | 丹麦的面包不单卖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(1)锁表查询的代码有以下的形式： select count() from v$locked_object; select  from v$locked_object; (2)查看哪个表被锁 select b.owner,b.object_name,a.session_id,a.locked_mode from v$locked_object a,dba_objects b where b.obj">
-<meta name="keywords" content="Oracle">
+  <meta name="description" content="(1)锁表查询的代码有以下的形式： select count(*) from v$locked_object; select * from v$locked_object; (2)查看哪个表被锁 select b.owner,b.object_name,a.session_id,a.locked_mode from v$locked_object a,dba_objects b where b.o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle数据库表被锁死的处理方法">
-<meta property="og:url" content="//ismatch.cn/2020/06/04/Oracle数据库表被锁死的处理方法/index.html">
+<meta property="og:url" content="https://ismatch.cn/2020/06/04/Oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%A2%AB%E9%94%81%E6%AD%BB%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="丹麦的面包不单卖的博客">
-<meta property="og:description" content="(1)锁表查询的代码有以下的形式： select count() from v$locked_object; select  from v$locked_object; (2)查看哪个表被锁 select b.owner,b.object_name,a.session_id,a.locked_mode from v$locked_object a,dba_objects b where b.obj">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-11-12T07:31:51.500Z">
+<meta property="og:description" content="(1)锁表查询的代码有以下的形式： select count(*) from v$locked_object; select * from v$locked_object; (2)查看哪个表被锁 select b.owner,b.object_name,a.session_id,a.locked_mode from v$locked_object a,dba_objects b where b.o">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-04T03:26:00.000Z">
+<meta property="article:modified_time" content="2026-11-12T07:31:51.500Z">
+<meta property="article:author" content="ismatch">
+<meta property="article:tag" content="Oracle">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oracle数据库表被锁死的处理方法">
-<meta name="twitter:description" content="(1)锁表查询的代码有以下的形式： select count() from v$locked_object; select  from v$locked_object; (2)查看哪个表被锁 select b.owner,b.object_name,a.session_id,a.locked_mode from v$locked_object a,dba_objects b where b.obj">
   
     <link rel="alternative" href="/atom.xml" title="丹麦的面包不单卖的博客" type="application/atom+xml">
   
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">ismatch</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">遇见你那天，阳光很好，BUG很少。</p>
 		
 
 		<nav class="header-menu">
@@ -111,10 +109,8 @@
 				<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">ismatch</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>遇见你那天，阳光很好，BUG很少。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -171,7 +167,7 @@
   
 
         
-        <a href="/2020/06/04/Oracle数据库表被锁死的处理方法/" class="archive-article-date">
+        <a href="/2020/06/04/Oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%A2%AB%E9%94%81%E6%AD%BB%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="archive-article-date">
   	<time datetime="2020-06-04T03:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-04</time>
 </a>
         
@@ -179,9 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>(1)锁表查询的代码有以下的形式： select count(<em>) from v$locked_object; select </em> from v$locked_object;</p>
-<p>(2)查看哪个表被锁 select b.owner,b.object_name,a.session_id,a.locked_mode from v$locked_object a,dba_objects b where b.object_id = a.object_id;</p>
-<p>(3)查看是哪个session引起的 select b.username,b.sid,b.serial#,logon_time from v$locked_object a,v$session b where a.session_id = b.sid order by b.logon_time;</p>
+        <p>(1)锁表查询的代码有以下的形式： select count(*) from v$locked_object; select * from v$locked_object;</p>
+<p>(2)查看哪个表被锁 select b.owner,b.object_name,a.session_id,a.locked_mode from v$locked_object a,dba_objects b where b.object_id &#x3D; a.object_id;</p>
+<p>(3)查看是哪个session引起的 select b.username,b.sid,b.serial#,logon_time from v$locked_object a,v$session b where a.session_id &#x3D; b.sid order by b.logon_time;</p>
 <p>(4)杀掉对应进程 –方法1：alter system kill session ‘sid,serial#’ 执行命令：alter system kill session’24,111’;（(其中24,111分别是上面查询出的sid,serial#）</p>
 <p>–方法2（方法1不灵时采用）：在操作系统命令行 orakill SID spid<br>orakill ORCL 4436 alter system kill session ‘26,7013’;</p>
 
@@ -279,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://ismatch.cn/2020/06/04/Oracle数据库表被锁死的处理方法/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ismatch.cn/2020/06/04/Oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%A2%AB%E9%94%81%E6%AD%BB%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,7 +289,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/22/Oracle备份表/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/22/Oracle%E5%A4%87%E4%BB%BD%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -440,15 +436,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">计算机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -456,11 +444,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,11 +456,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -480,15 +468,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
+                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -500,15 +496,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">books</a>
+                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -516,11 +508,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
+                <a href="javascript:void(0)" class="js-tag color1">books</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -532,11 +520,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -545,6 +533,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">My</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">

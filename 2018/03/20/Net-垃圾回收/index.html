@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//ismatch.cn">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://ismatch.cn">
   <title>.Net基础-垃圾回收 | 丹麦的面包不单卖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常规的垃圾回收策略： 类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。 类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。 类中有非托管资源: 跟从微软模板，实现一个私有函数释放托管和非托管资源，实现IDisposi">
-<meta name="keywords" content=".Net基础">
+  <meta name="description" content="常规的垃圾回收策略： 类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。  类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。  类中有非托管资源: 跟从微软模板，实现一个私有函数释放托管和非托管资源，实现IDispo">
 <meta property="og:type" content="article">
 <meta property="og:title" content=".Net基础-垃圾回收">
-<meta property="og:url" content="//ismatch.cn/2018/03/20/Net-垃圾回收/index.html">
+<meta property="og:url" content="https://ismatch.cn/2018/03/20/Net-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/index.html">
 <meta property="og:site_name" content="丹麦的面包不单卖的博客">
-<meta property="og:description" content="常规的垃圾回收策略： 类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。 类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。 类中有非托管资源: 跟从微软模板，实现一个私有函数释放托管和非托管资源，实现IDisposi">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-11-12T07:31:51.499Z">
+<meta property="og:description" content="常规的垃圾回收策略： 类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。  类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。  类中有非托管资源: 跟从微软模板，实现一个私有函数释放托管和非托管资源，实现IDispo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-03-20T14:30:00.000Z">
+<meta property="article:modified_time" content="2026-11-12T07:31:51.499Z">
+<meta property="article:author" content="ismatch">
+<meta property="article:tag" content=".Net基础">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=".Net基础-垃圾回收">
-<meta name="twitter:description" content="常规的垃圾回收策略： 类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。 类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。 类中有非托管资源: 跟从微软模板，实现一个私有函数释放托管和非托管资源，实现IDisposi">
   
     <link rel="alternative" href="/atom.xml" title="丹麦的面包不单卖的博客" type="application/atom+xml">
   
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">ismatch</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">遇见你那天，阳光很好，BUG很少。</p>
 		
 
 		<nav class="header-menu">
@@ -111,10 +109,8 @@
 				<img src="https://avatars3.githubusercontent.com/u/19652321?s=460&amp;u=13267a8465b5615693353c820a9027902e5cfc0f&amp;v=4" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">ismatch</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>遇见你那天，阳光很好，BUG很少。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -171,7 +167,7 @@
   
 
         
-        <a href="/2018/03/20/Net-垃圾回收/" class="archive-article-date">
+        <a href="/2018/03/20/Net-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/" class="archive-article-date">
   	<time datetime="2018-03-20T14:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
 </a>
         
@@ -180,14 +176,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h5 id="常规的垃圾回收策略："><a href="#常规的垃圾回收策略：" class="headerlink" title="常规的垃圾回收策略："></a>常规的垃圾回收策略：</h5><ul>
-<li>类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。</li>
-<li>类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。</li>
+<li><p>类中没有非托管资源，且没有对象实现IDisposible: 什么也不用做。</p>
+</li>
+<li><p>类中没有非托管资源，且有对象实现IDisposible: 特别注意这些对象，确保调用了它们的Dispose方法（显式或者隐式的）。你可以实现IDisposible，然后实现Dispose方法，在其中释放资源。</p>
+</li>
 <li><p>类中有非托管资源: 跟从微软模板，实现一个私有函数释放托管和非托管资源，实现IDisposible，然后实现Dispose方法，并在其中调用私有函数，然后呼叫GC.SuppressFinalize（第一道闸）。实现一个解构函数，并在其中调用私有函数（第二道闸）。如果你的第一道闸完美无缺，第二道闸是没有机会上场的。</p>
 </li>
 <li><p>参考链接</p>
 </li>
 </ul>
-<p><a href="http://www.cnblogs.com/haoyifei/p/5680745.html" target="_blank" rel="noopener">垃圾回收：概念与策略</a></p>
+<p><a href="http://www.cnblogs.com/haoyifei/p/5680745.html">垃圾回收：概念与策略</a></p>
 
       
 
@@ -283,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://ismatch.cn/2018/03/20/Net-垃圾回收/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ismatch.cn/2018/03/20/Net-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,7 +295,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/20/Net-基础-反射/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/20/Net-%E5%9F%BA%E7%A1%80-%E5%8F%8D%E5%B0%84/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -307,7 +305,7 @@
     </a>
   
   
-    <a href="/2018/03/19/云飞扬CMS快速开发平台学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/19/%E4%BA%91%E9%A3%9E%E6%89%ACCMS%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">云飞扬CMS快速开发平台学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -444,15 +442,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">计算机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -460,11 +450,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color2">DanishBread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -472,11 +462,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">诗和远方</a>
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -484,15 +474,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
+                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">.Net基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">jwt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -504,15 +502,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">books</a>
+                <a href="javascript:void(0)" class="js-tag color5">安全漏洞</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,11 +514,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
+                <a href="javascript:void(0)" class="js-tag color1">books</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -536,11 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color1">SourceCode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -549,6 +539,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">My</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
